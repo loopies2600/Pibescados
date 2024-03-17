@@ -1,0 +1,44 @@
+{
+	"schemaVersion": 1,
+	"id": "whimsymotion",
+	"version": "${version}",
+	"name": "WhimsyMotion",
+	"description": "Test Mod",
+	"authors": [
+		"Loopies"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/whimsymotion/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.loopies.mcplatformer.Pibescados"
+		],
+		"client": [
+			"com.loopies.mcplatformer.PibescadosClient"
+		],
+		"fabric-datagen": [
+			"com.loopies.mcplatformer.PibescadosDataGenerator"
+		]
+	},
+	"mixins": [
+		"whimsymotion.mixins.json",
+		{
+			"config": "whimsymotion.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.15.7",
+		"minecraft": "~1.20.4",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
